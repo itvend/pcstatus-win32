@@ -1,0 +1,10 @@
+﻿Build started 17.11.2013 22:15:50.
+     1>Project "C:\Users\Tiit\Google Drive\Dev\VC\CPUUsageVC10\CPUUsageVC10\CPUUsageVC10.vcxproj" on node 2 (clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\CPUUsageVC10.lastbuildstate".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppClean.targets(74,5): warning : Access to the path 'C:\USERS\TIIT\GOOGLE DRIVE\DEV\VC\CPUUSAGEVC10\RELEASE\CPUUSAGEVC10.EXE' is denied.
+     1>Done Building Project "C:\Users\Tiit\Google Drive\Dev\VC\CPUUsageVC10\CPUUsageVC10\CPUUsageVC10.vcxproj" (clean target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.38
