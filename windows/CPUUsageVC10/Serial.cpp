@@ -91,7 +91,7 @@ BOOL CSerial::Close( void )
 
 }
 
-BOOL CSerial::WriteCommByte( unsigned char ucByte )
+BOOL CSerial::WriteCommByte( unsigned int ucByte )
 {
 	BOOL bWriteStat;
 	DWORD dwBytesWritten;
@@ -108,7 +108,7 @@ BOOL CSerial::WriteCommByte( unsigned char ucByte )
 	return( TRUE );
 
 }
-
+/*
 int CSerial::SendData( const char *buffer, int size )
 {
 
@@ -124,7 +124,7 @@ int CSerial::SendData( const char *buffer, int size )
 	return( (int) dwBytesWritten );
 
 }
-
+*/
 int CSerial::ReadDataWaiting( void )
 {
 

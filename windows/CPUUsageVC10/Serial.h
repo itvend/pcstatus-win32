@@ -27,11 +27,11 @@ public:
 	int ReadData( void *, int );
 	int SendData( const char *, int );
 	int ReadDataWaiting( void );
+	BOOL WriteCommByte( unsigned int );
 
 	BOOL IsOpened( void ){ return( m_bOpened ); }
 
 protected:
-	BOOL WriteCommByte( unsigned char );
 
 	HANDLE m_hIDComDev;
 	OVERLAPPED m_OverlappedRead, m_OverlappedWrite;

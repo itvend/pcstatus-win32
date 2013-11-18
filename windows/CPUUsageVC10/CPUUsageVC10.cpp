@@ -2,8 +2,40 @@
 //
 
 #include "stdafx.h"
+#include <string>
 
 using namespace std;
+
+int memUsageLSB( int n ){
+	int res = 0;
+
+	int len = 8;
+
+	for(int i=0; i < len; i++){
+		if(1 & (n >> i)){
+			res |= 1 << i;
+		}else{
+			res |= 0 << i;
+		}
+	}
+
+	return res;
+}
+int memUsageMSB( int n ){
+	int res = 0;
+
+	int len = 15;
+
+	for(int i=8; i < len; i++){
+		if(1 & (n >> i)){
+			res |= 1 << (i-8);
+		}else{
+			res |= 0 << (i-8);
+		}
+	}
+
+	return res;
+}
 
 static PDH_HQUERY cpuQuery;
 static PDH_HCOUNTER cpuTotal;
@@ -16,12 +48,12 @@ void init(){
 }
 
 
-double getCurrentValue(){
+int getCurrentValue(){
     PDH_FMT_COUNTERVALUE counterVal;
 
     PdhCollectQueryData(cpuQuery);
-    PdhGetFormattedCounterValue(cpuTotal, PDH_FMT_DOUBLE, NULL, &counterVal);
-    return counterVal.doubleValue;
+    PdhGetFormattedCounterValue(cpuTotal, PDH_FMT_LONG, NULL, &counterVal);
+    return counterVal.longValue;
 }
 
 int main(int argc, char *argv[]){
@@ -77,17 +109,28 @@ int main(int argc, char *argv[]){
 		MEMORYSTATUSEX memInfo;
 		memInfo.dwLength = sizeof(MEMORYSTATUSEX);
 		GlobalMemoryStatusEx(&memInfo);
-		DWORDLONG totalVirtualMem = memInfo.ullTotalPageFile;
-		DWORDLONG virtualMemUsed = memInfo.ullTotalPageFile - memInfo.ullAvailPageFile;
-		DWORDLONG physMemUsed = memInfo.ullTotalPhys - memInfo.ullAvailPhys;
 
-		char buffer[40];
-		sprintf_s(buffer, "C %1.0f%% M %I64luMb\n", getCurrentValue(), memInfo.ullAvailPhys/(1024*1024));
-		serial.SendData(buffer, strlen(buffer));
+		byte cpuUsage	= (int)getCurrentValue();
 
-		printf("COM %d, BOUD %d, %s", comPort, comBoud, buffer);
+		int mPU		= memInfo.ullAvailPhys/(1024*1024);
+
+		byte msb		= memUsageMSB(mPU);
+		byte lsb		= memUsageLSB(mPU);
+
+		// 0
+		serial.WriteCommByte(0xfa);
+		// 1
+		serial.WriteCommByte(cpuUsage);
+		// 2
+		serial.WriteCommByte(msb);
+		// 3
+		serial.WriteCommByte(lsb);
+		// 4
+		serial.WriteCommByte(0x6c);
 
 		Sleep(comUpdate);
+
+		printf("Avaible RAM: %i | CPU Usage %i \n", mPU, cpuUsage);
 
 	}
 
