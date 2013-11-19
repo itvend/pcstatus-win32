@@ -1,18 +1,13 @@
-﻿Build started 19.11.2013 20:03:51.
+﻿Build started 19.11.2013 23:48:09.
      1>Project "C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\PCStatus\PCStatus.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Release\PCStatus.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt PCStatus.cpp Serial.cpp
-         PCStatus.cpp
-     1>PCStatus.cpp(338): warning C4244: 'initializing' : conversion from 'DWORDLONG' to 'int', possible loss of data
-     1>PCStatus.cpp(346): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
-         Serial.cpp
+         All outputs are up-to-date.
        ResourceCompile:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /l"0x0409" /nologo /fo"Release\resource.res" resource.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.exe" /VERBOSE /INCREMENTAL:NO /NOLOGO Pdh.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\PCStatus-32bit.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.lib" /MACHINE:X86 Release\resource.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.exe" /VERBOSE /INCREMENTAL:NO /NOLOGO Pdh.lib Comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\PCStatus-32bit.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.lib" /MACHINE:X86 Release\resource.res
          Release\PCStatus.obj
          Release\Serial.obj
          
@@ -47,7 +42,11 @@
                Found pdh_NULL_THUNK_DATA
                  Referenced in Pdh.lib(pdh.dll)
                  Loaded Pdh.lib(pdh.dll)
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Comctl32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
+               Found __imp__GetCommandLineA@0
+                 Referenced in PCStatus.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
                Found __imp__Sleep@4
                  Referenced in PCStatus.obj
                  Loaded kernel32.lib(KERNEL32.dll)
@@ -97,6 +96,7 @@
                  Referenced in Serial.obj
                  Loaded kernel32.lib(KERNEL32.dll)
                Found __IMPORT_DESCRIPTOR_KERNEL32
+                 Referenced in kernel32.lib(KERNEL32.dll)
                  Referenced in kernel32.lib(KERNEL32.dll)
                  Referenced in kernel32.lib(KERNEL32.dll)
                  Referenced in kernel32.lib(KERNEL32.dll)
@@ -214,6 +214,9 @@
                Found __imp__sprintf
                  Referenced in PCStatus.obj
                  Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp__strstr
+                 Referenced in PCStatus.obj
+                 Loaded MSVCRT.lib(MSVCR100.dll)
                Found __imp__atoi
                  Referenced in PCStatus.obj
                  Loaded MSVCRT.lib(MSVCR100.dll)
@@ -233,6 +236,7 @@
                  Referenced in MSVCRT.lib(gs_report.obj)
                  Loaded MSVCRT.lib(gs_cookie.obj)
                Found __IMPORT_DESCRIPTOR_MSVCR100
+                 Referenced in MSVCRT.lib(MSVCR100.dll)
                  Referenced in MSVCRT.lib(MSVCR100.dll)
                  Referenced in MSVCRT.lib(MSVCR100.dll)
                  Referenced in MSVCRT.lib(MSVCR100.dll)
@@ -369,6 +373,7 @@
                  Loaded MSVCRT.lib(MSVCR100.dll)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\OLDNAMES.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Comctl32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
                Found __imp__EncodePointer@4
                  Referenced in MSVCRT.lib(atonexit.obj)
@@ -434,6 +439,7 @@
              Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\MSVCRT.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\OLDNAMES.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Comctl32.lib:
          
          Finished searching libraries
          
@@ -444,6 +450,7 @@
          
          Searching libraries
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Comctl32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
@@ -466,6 +473,7 @@
          
          Searching libraries
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Comctl32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
@@ -483,6 +491,7 @@
                  Loaded MSVCRT.lib(loadcfg.obj)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\OLDNAMES.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Comctl32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
              Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
@@ -501,7 +510,7 @@
          Invoking CVTRES.EXE:
           /machine:x86
           /verbose
-          /out:"C:\Users\Tiit\AppData\Local\Temp\lnk5B9D.tmp"
+          /out:"C:\Users\Tiit\AppData\Local\Temp\lnk4635.tmp"
           /readonly
           "Release\resource.res"
          Microsoft (R) Windows Resource To Object Converter Version 10.00.30319.01
@@ -511,7 +520,7 @@
          adding resource. type:ICON, name:2, language:0x0425, flags:0x1010, size:744
          adding resource. type:ICON, name:3, language:0x0425, flags:0x1010, size:1640
          adding resource. type:GROUP_ICON, name:101, language:0x0425, flags:0x1030, size:48
-         adding resource. type:STRING, name:1, language:0x0425, flags:0x1030, size:96
+         adding resource. type:STRING, name:1, language:0x0425, flags:0x1030, size:104
          
          Processing /ORDER options
              External code objects not listed in the /ORDER file:
@@ -549,6 +558,7 @@
                  GetCurrentThreadId@0		; kernel32.lib(KERNEL32.dll)
                  CreateFileA@28		; kernel32.lib(KERNEL32.dll)
                  _initterm		; MSVCRT.lib(MSVCR100.dll)
+                 strstr		; MSVCRT.lib(MSVCR100.dll)
                  GetCurrentProcess@0		; kernel32.lib(KERNEL32.dll)
                  _FindPESection		; MSVCRT.lib(pesect.obj)
                  GetMessageA@16		; user32.lib(USER32.dll)
@@ -598,6 +608,7 @@
                  InterlockedExchange@8		; kernel32.lib(KERNEL32.dll)
                  UnhandledExceptionFilter@4		; kernel32.lib(KERNEL32.dll)
                  _except_handler4_common		; MSVCRT.lib(MSVCR100.dll)
+                 GetCommandLineA@0		; kernel32.lib(KERNEL32.dll)
                  _matherr		; MSVCRT.lib(merr.obj)
                  __getmainargs		; MSVCRT.lib(MSVCR100.dll)
                  _beginthread		; MSVCRT.lib(MSVCR100.dll)
@@ -624,6 +635,7 @@
              Discarded '.idata$4' from kernel32.lib(KERNEL32.dll)
              Discarded '.idata$6' from kernel32.lib(KERNEL32.dll)
              Discarded '.idata$6' from kernel32.lib(KERNEL32.dll)
+             Discarded "char * __cdecl strstr(char *,char const *)" (?strstr@@YAPADPADPBD@Z) from PCStatus.obj
              Discarded "void __cdecl cpuUsageInit(void)" (?cpuUsageInit@@YAXXZ) from PCStatus.obj
              Discarded "int __cdecl cpuUsageValue(void)" (?cpuUsageValue@@YAHXZ) from PCStatus.obj
              Discarded "int __cdecl memUsageLSB(int)" (?memUsageLSB@@YAHH@Z) from PCStatus.obj
@@ -634,6 +646,7 @@
              Discarded _PdhOpenQueryA@12 from Pdh.lib(pdh.dll)
              Discarded _PdhAddCounterA@16 from Pdh.lib(pdh.dll)
              Discarded _PdhCollectQueryData@4 from Pdh.lib(pdh.dll)
+             Discarded _GetCommandLineA@0 from kernel32.lib(KERNEL32.dll)
              Discarded _Sleep@4 from kernel32.lib(KERNEL32.dll)
              Discarded _GetLastError@0 from kernel32.lib(KERNEL32.dll)
              Discarded _GlobalMemoryStatusEx@4 from kernel32.lib(KERNEL32.dll)
@@ -667,6 +680,7 @@
              Discarded _GetStockObject@4 from gdi32.lib(GDI32.dll)
              Discarded _Shell_NotifyIconA@8 from shell32.lib(SHELL32.dll)
              Discarded _sprintf from MSVCRT.lib(MSVCR100.dll)
+             Discarded _strstr from MSVCRT.lib(MSVCR100.dll)
              Discarded _atoi from MSVCRT.lib(MSVCR100.dll)
              Discarded __beginthread from MSVCRT.lib(MSVCR100.dll)
              Discarded _NtCurrentTeb from MSVCRT.lib(crtexew.obj)
@@ -714,6 +728,7 @@
               Pdh.lib(pdh.dll)
               Pdh.lib(pdh.dll)
               Pdh.lib(pdh.dll)
+              kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
@@ -822,6 +837,7 @@
               MSVCRT.lib(MSVCR100.dll)
               MSVCRT.lib(MSVCR100.dll)
               MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
          Finished pass 2
          PCStatus.vcxproj -> C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.exe
        Manifest:
@@ -833,4 +849,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.70
+Time Elapsed 00:00:00.48

@@ -1,3 +1,13 @@
+#if defined _M_IX86
+#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\"")
+#elif defined _M_IA64
+#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='ia64' publicKeyToken='6595b64144ccf1df' language='*'\"")
+#elif defined _M_X64
+#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='amd64' publicKeyToken='6595b64144ccf1df' language='*'\"")
+#else
+#pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
+#endif
+
 #include <Windows.h>
 #include <stdio.h>
 #include <process.h>
@@ -49,8 +59,15 @@ LRESULT CALLBACK WinProc(HWND hWnd,UINT message,WPARAM wParam,LPARAM lParam);
 
 /* Big Bang */
 
-int WINAPI WinMain(HINSTANCE hInst,HINSTANCE hPrevInst,LPSTR lpCmdLine,int nShowCmd)
+int WINAPI WinMain(HINSTANCE hInst,HINSTANCE hPrevInst,LPSTR lpCmdLine, int nShowCmd)
 {
+
+	char *cmdString = GetCommandLine();
+
+	if(strstr(cmdString, "/hide")){
+		nShowCmd = SW_HIDE;
+	}
+
 	WNDCLASSEX wClass;
 	ZeroMemory(&wClass,sizeof(WNDCLASSEX));
 	wClass.cbClsExtra=NULL;
@@ -77,7 +94,7 @@ int WINAPI WinMain(HINSTANCE hInst,HINSTANCE hPrevInst,LPSTR lpCmdLine,int nShow
 	HWND hWnd=CreateWindowEx(NULL,
 			"Window Class",
 			windowName,
-			WS_OVERLAPPED | WS_DLGFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SYSMENU,
+			WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU,
 			200,
 			200,
 			460, // laius
