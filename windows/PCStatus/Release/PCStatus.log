@@ -1,0 +1,836 @@
+﻿Build started 19.11.2013 20:03:51.
+     1>Project "C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\PCStatus\PCStatus.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\PCStatus.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt PCStatus.cpp Serial.cpp
+         PCStatus.cpp
+     1>PCStatus.cpp(338): warning C4244: 'initializing' : conversion from 'DWORDLONG' to 'int', possible loss of data
+     1>PCStatus.cpp(346): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+         Serial.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /l"0x0409" /nologo /fo"Release\resource.res" resource.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.exe" /VERBOSE /INCREMENTAL:NO /NOLOGO Pdh.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\PCStatus-32bit.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.lib" /MACHINE:X86 Release\resource.res
+         Release\PCStatus.obj
+         Release\Serial.obj
+         
+         Starting pass 1
+         Processed /DEFAULTLIB:uuid.lib
+         Processed /DEFAULTLIB:MSVCRT
+         Processed /DEFAULTLIB:OLDNAMES
+         
+         Searching libraries
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+               Found _PdhGetFormattedCounterValue@16
+                 Referenced in PCStatus.obj
+                 Loaded Pdh.lib(pdh.dll)
+               Found _PdhOpenQueryA@12
+                 Referenced in PCStatus.obj
+                 Loaded Pdh.lib(pdh.dll)
+               Found _PdhAddCounterA@16
+                 Referenced in PCStatus.obj
+                 Loaded Pdh.lib(pdh.dll)
+               Found _PdhCollectQueryData@4
+                 Referenced in PCStatus.obj
+                 Loaded Pdh.lib(pdh.dll)
+               Found __IMPORT_DESCRIPTOR_pdh
+                 Referenced in Pdh.lib(pdh.dll)
+                 Referenced in Pdh.lib(pdh.dll)
+                 Referenced in Pdh.lib(pdh.dll)
+                 Referenced in Pdh.lib(pdh.dll)
+                 Loaded Pdh.lib(pdh.dll)
+               Found __NULL_IMPORT_DESCRIPTOR
+                 Referenced in Pdh.lib(pdh.dll)
+                 Loaded Pdh.lib(pdh.dll)
+               Found pdh_NULL_THUNK_DATA
+                 Referenced in Pdh.lib(pdh.dll)
+                 Loaded Pdh.lib(pdh.dll)
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
+               Found __imp__Sleep@4
+                 Referenced in PCStatus.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetLastError@0
+                 Referenced in PCStatus.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GlobalMemoryStatusEx@4
+                 Referenced in PCStatus.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetModuleHandleA@4
+                 Referenced in PCStatus.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__SetupComm@12
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__CreateFileA@28
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__ClearCommError@12
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetCommState@8
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__WaitForSingleObject@8
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__WriteFile@20
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__SetCommState@8
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__SetCommTimeouts@8
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__CreateEventA@16
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__ReadFile@20
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetOverlappedResult@16
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__CloseHandle@4
+                 Referenced in Serial.obj
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __IMPORT_DESCRIPTOR_KERNEL32
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found KERNEL32_NULL_THUNK_DATA
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Loaded kernel32.lib(KERNEL32.dll)
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
+               Found __imp__LoadCursorA@8
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__DispatchMessageA@4
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__ShowWindow@8
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__DefWindowProcA@16
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__CreateWindowExA@48
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__MessageBoxA@16
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__TranslateMessage@4
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__SendMessageA@16
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__LoadIconA@8
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__LoadStringA@16
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__PostQuitMessage@4
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__RegisterClassExA@4
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__GetMessageA@16
+                 Referenced in PCStatus.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __imp__wsprintfA
+                 Referenced in Serial.obj
+                 Loaded user32.lib(USER32.dll)
+               Found __IMPORT_DESCRIPTOR_USER32
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Referenced in user32.lib(USER32.dll)
+                 Loaded user32.lib(USER32.dll)
+               Found USER32_NULL_THUNK_DATA
+                 Referenced in user32.lib(USER32.dll)
+                 Loaded user32.lib(USER32.dll)
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
+               Found __imp__GetStockObject@4
+                 Referenced in PCStatus.obj
+                 Loaded gdi32.lib(GDI32.dll)
+               Found __IMPORT_DESCRIPTOR_GDI32
+                 Referenced in gdi32.lib(GDI32.dll)
+                 Loaded gdi32.lib(GDI32.dll)
+               Found GDI32_NULL_THUNK_DATA
+                 Referenced in gdi32.lib(GDI32.dll)
+                 Loaded gdi32.lib(GDI32.dll)
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\winspool.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\comdlg32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\advapi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\shell32.lib:
+               Found __imp__Shell_NotifyIconA@8
+                 Referenced in PCStatus.obj
+                 Loaded shell32.lib(SHELL32.dll)
+               Found __IMPORT_DESCRIPTOR_SHELL32
+                 Referenced in shell32.lib(SHELL32.dll)
+                 Loaded shell32.lib(SHELL32.dll)
+               Found SHELL32_NULL_THUNK_DATA
+                 Referenced in shell32.lib(SHELL32.dll)
+                 Loaded shell32.lib(SHELL32.dll)
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\ole32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\oleaut32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\uuid.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbc32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbccp32.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\MSVCRT.lib:
+               Found @__security_check_cookie@4
+                 Referenced in PCStatus.obj
+                 Loaded MSVCRT.lib(secchk.obj)
+               Found __imp__sprintf
+                 Referenced in PCStatus.obj
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp__atoi
+                 Referenced in PCStatus.obj
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp___beginthread
+                 Referenced in PCStatus.obj
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found _atexit
+                 Referenced in PCStatus.obj
+                 Loaded MSVCRT.lib(atonexit.obj)
+               Found _WinMainCRTStartup
+                 Loaded MSVCRT.lib(crtexew.obj)
+               Found ___report_gsfailure
+                 Referenced in MSVCRT.lib(secchk.obj)
+                 Loaded MSVCRT.lib(gs_report.obj)
+               Found ___security_cookie
+                 Referenced in MSVCRT.lib(secchk.obj)
+                 Referenced in MSVCRT.lib(gs_report.obj)
+                 Loaded MSVCRT.lib(gs_cookie.obj)
+               Found __IMPORT_DESCRIPTOR_MSVCR100
+                 Referenced in MSVCRT.lib(MSVCR100.dll)
+                 Referenced in MSVCRT.lib(MSVCR100.dll)
+                 Referenced in MSVCRT.lib(MSVCR100.dll)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __unlock
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found ___dllonexit
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __lock
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp___onexit
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __SEH_epilog4
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(sehprolg4.obj)
+               Found __except_handler4
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Referenced in MSVCRT.lib(sehprolg4.obj)
+                 Loaded MSVCRT.lib(chandler4gs.obj)
+               Found ___CxxSetUnhandledExceptionFilter
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(unhandld.obj)
+               Found __amsg_exit
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp____getmainargs
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __dowildcard
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(wildcard.obj)
+               Found __newmode
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(_newmode.obj)
+               Found __RTC_Terminate
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(_initsect_.obj)
+               Found __imp___cexit
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp___exit
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __XcptFilter
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp___ismbblead
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp__exit
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp___acmdln
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __IsNonwritableInCurrentImage
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(pesect.obj)
+               Found __initterm
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found ___xc_a
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(cinitexe.obj)
+         Processed /DEFAULTLIB:kernel32.lib
+          Processed /DISALLOWLIB:libcmt.lib
+          Processed /DISALLOWLIB:libcmtd.lib
+          Processed /DISALLOWLIB:msvcrtd.lib
+               Found __initterm_e
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found ___native_startup_state
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(natstart.obj)
+               Found __imp___configthreadlocale
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found ___globallocalestatus
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(xthdloc.obj)
+               Found __setdefaultprecision
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(fp8.obj)
+               Found __imp____setusermatherr
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __matherr
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(merr.obj)
+               Found __setargv
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(dllargv.obj)
+               Found __commode
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(xncommod.obj)
+               Found __imp___commode
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __imp___fmode
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __fmode
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(xtxtmode.obj)
+               Found __imp____set_app_type
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found ___security_init_cookie
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded MSVCRT.lib(gs_support.obj)
+               Found __crt_debugger_hook
+                 Referenced in MSVCRT.lib(gs_report.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found MSVCR100_NULL_THUNK_DATA
+                 Referenced in MSVCRT.lib(MSVCR100.dll)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __except_handler4_common
+                 Referenced in MSVCRT.lib(chandler4gs.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found "void __cdecl terminate(void)" (?terminate@@YAXXZ)
+                 Referenced in MSVCRT.lib(unhandld.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __invoke_watson
+                 Referenced in MSVCRT.lib(fp8.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+               Found __controlfp_s
+                 Referenced in MSVCRT.lib(fp8.obj)
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\OLDNAMES.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
+               Found __imp__EncodePointer@4
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__DecodePointer@4
+                 Referenced in MSVCRT.lib(atonexit.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__InterlockedExchange@8
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__InterlockedCompareExchange@12
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__HeapSetInformation@16
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetStartupInfoW@4
+                 Referenced in MSVCRT.lib(crtexew.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__TerminateProcess@8
+                 Referenced in MSVCRT.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetCurrentProcess@0
+                 Referenced in MSVCRT.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__UnhandledExceptionFilter@4
+                 Referenced in MSVCRT.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__SetUnhandledExceptionFilter@4
+                 Referenced in MSVCRT.lib(gs_report.obj)
+                 Referenced in MSVCRT.lib(unhandld.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__IsDebuggerPresent@0
+                 Referenced in MSVCRT.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__QueryPerformanceCounter@4
+                 Referenced in MSVCRT.lib(gs_support.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetTickCount@0
+                 Referenced in MSVCRT.lib(gs_support.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetCurrentThreadId@0
+                 Referenced in MSVCRT.lib(gs_support.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetCurrentProcessId@0
+                 Referenced in MSVCRT.lib(gs_support.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetSystemTimeAsFileTime@4
+                 Referenced in MSVCRT.lib(gs_support.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\winspool.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\comdlg32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\advapi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\shell32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\ole32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\oleaut32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\uuid.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbc32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbccp32.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\MSVCRT.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\OLDNAMES.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+         
+         Finished searching libraries
+         
+         Finished pass 1
+         
+         Generating code
+         Finished generating code
+         
+         Searching libraries
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\winspool.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\comdlg32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\advapi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\shell32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\ole32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\oleaut32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\uuid.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbc32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbccp32.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\MSVCRT.lib:
+               Found _memset
+                 Referenced in PCStatus.obj
+                 Loaded MSVCRT.lib(MSVCR100.dll)
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\OLDNAMES.lib:
+         
+         Finished searching libraries
+         
+         Searching libraries
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\winspool.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\comdlg32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\advapi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\shell32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\ole32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\oleaut32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\uuid.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbc32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbccp32.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\MSVCRT.lib:
+               Found __load_config_used
+                 Loaded MSVCRT.lib(loadcfg.obj)
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\OLDNAMES.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\Pdh.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\kernel32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\user32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\gdi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\winspool.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\comdlg32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\advapi32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\shell32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\ole32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\oleaut32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\uuid.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbc32.lib:
+             Searching C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\lib\odbccp32.lib:
+         
+         Finished searching libraries
+         
+         Invoking CVTRES.EXE:
+          /machine:x86
+          /verbose
+          /out:"C:\Users\Tiit\AppData\Local\Temp\lnk5B9D.tmp"
+          /readonly
+          "Release\resource.res"
+         Microsoft (R) Windows Resource To Object Converter Version 10.00.30319.01
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         adding resource. type:ICON, name:1, language:0x0425, flags:0x1010, size:296
+         adding resource. type:ICON, name:2, language:0x0425, flags:0x1010, size:744
+         adding resource. type:ICON, name:3, language:0x0425, flags:0x1010, size:1640
+         adding resource. type:GROUP_ICON, name:101, language:0x0425, flags:0x1030, size:48
+         adding resource. type:STRING, name:1, language:0x0425, flags:0x1030, size:96
+         
+         Processing /ORDER options
+             External code objects not listed in the /ORDER file:
+         
+                 _setdefaultprecision		; MSVCRT.lib(fp8.obj)
+                 GetModuleHandleA@4		; kernel32.lib(KERNEL32.dll)
+                 _setargv		; MSVCRT.lib(dllargv.obj)
+                 PdhCollectQueryData@4		; Pdh.lib(pdh.dll)
+                 CreateEventA@16		; kernel32.lib(KERNEL32.dll)
+                 @__security_check_cookie@4		; MSVCRT.lib(secchk.obj)
+                 IsDebuggerPresent@0		; kernel32.lib(KERNEL32.dll)
+                 DefWindowProcA@16		; user32.lib(USER32.dll)
+                 GetCommState@8		; kernel32.lib(KERNEL32.dll)
+                 PdhOpenQueryA@12		; Pdh.lib(pdh.dll)
+                 PdhAddCounterA@16		; Pdh.lib(pdh.dll)
+                 SetCommState@8		; kernel32.lib(KERNEL32.dll)
+                 GetStartupInfoW@4		; kernel32.lib(KERNEL32.dll)
+                 _RTC_Terminate		; MSVCRT.lib(_initsect_.obj)
+                 SetupComm@12		; kernel32.lib(KERNEL32.dll)
+                 CloseHandle@4		; kernel32.lib(KERNEL32.dll)
+                 RegisterClassExA@4		; user32.lib(USER32.dll)
+                 __setusermatherr		; MSVCRT.lib(MSVCR100.dll)
+                 Sleep@4		; kernel32.lib(KERNEL32.dll)
+                 __security_init_cookie		; MSVCRT.lib(gs_support.obj)
+                 SetUnhandledExceptionFilter@4		; kernel32.lib(KERNEL32.dll)
+                 _cexit		; MSVCRT.lib(MSVCR100.dll)
+                 atexit		; MSVCRT.lib(atonexit.obj)
+                 memset		; MSVCRT.lib(MSVCR100.dll)
+                 _except_handler4		; MSVCRT.lib(chandler4gs.obj)
+                 DispatchMessageA@4		; user32.lib(USER32.dll)
+                 _lock		; MSVCRT.lib(MSVCR100.dll)
+                 __report_gsfailure		; MSVCRT.lib(gs_report.obj)
+                 ?terminate@@YAXXZ		; MSVCRT.lib(MSVCR100.dll)
+                 _exit		; MSVCRT.lib(MSVCR100.dll)
+                 GetCurrentThreadId@0		; kernel32.lib(KERNEL32.dll)
+                 CreateFileA@28		; kernel32.lib(KERNEL32.dll)
+                 _initterm		; MSVCRT.lib(MSVCR100.dll)
+                 GetCurrentProcess@0		; kernel32.lib(KERNEL32.dll)
+                 _FindPESection		; MSVCRT.lib(pesect.obj)
+                 GetMessageA@16		; user32.lib(USER32.dll)
+                 HeapSetInformation@16		; kernel32.lib(KERNEL32.dll)
+                 _configthreadlocale		; MSVCRT.lib(MSVCR100.dll)
+                 WriteFile@20		; kernel32.lib(KERNEL32.dll)
+                 GlobalMemoryStatusEx@4		; kernel32.lib(KERNEL32.dll)
+                 _crt_debugger_hook		; MSVCRT.lib(MSVCR100.dll)
+                 _ValidateImageBase		; MSVCRT.lib(pesect.obj)
+                 InterlockedCompareExchange@12		; kernel32.lib(KERNEL32.dll)
+                 LoadStringA@16		; user32.lib(USER32.dll)
+                 wsprintfA		; user32.lib(USER32.dll)
+                 PdhGetFormattedCounterValue@16		; Pdh.lib(pdh.dll)
+                 Shell_NotifyIconA@8		; shell32.lib(SHELL32.dll)
+                 TranslateMessage@4		; user32.lib(USER32.dll)
+                 _onexit		; MSVCRT.lib(atonexit.obj)
+                 NtCurrentTeb		; MSVCRT.lib(crtexew.obj)
+                 ReadFile@20		; kernel32.lib(KERNEL32.dll)
+                 _invoke_watson_if_error		; MSVCRT.lib(fp8.obj)
+                 TerminateProcess@8		; kernel32.lib(KERNEL32.dll)
+                 ?__CxxUnhandledExceptionFilter@@YGJPAU_EXCEPTION_POINTERS@@@Z		; MSVCRT.lib(unhandld.obj)
+                 __CxxSetUnhandledExceptionFilter		; MSVCRT.lib(unhandld.obj)
+                 QueryPerformanceCounter@4		; kernel32.lib(KERNEL32.dll)
+                 _ismbblead		; MSVCRT.lib(MSVCR100.dll)
+                 LoadIconA@8		; user32.lib(USER32.dll)
+                 _unlock		; MSVCRT.lib(MSVCR100.dll)
+                 GetCurrentProcessId@0		; kernel32.lib(KERNEL32.dll)
+                 __set_app_type		; MSVCRT.lib(MSVCR100.dll)
+                 PostQuitMessage@4		; user32.lib(USER32.dll)
+                 EncodePointer@4		; kernel32.lib(KERNEL32.dll)
+                 _RTC_Initialize		; MSVCRT.lib(_initsect_.obj)
+                 GetOverlappedResult@16		; kernel32.lib(KERNEL32.dll)
+                 sprintf		; MSVCRT.lib(MSVCR100.dll)
+                 WinMainCRTStartup		; MSVCRT.lib(crtexew.obj)
+                 _controlfp_s		; MSVCRT.lib(MSVCR100.dll)
+                 GetSystemTimeAsFileTime@4		; kernel32.lib(KERNEL32.dll)
+                 DecodePointer@4		; kernel32.lib(KERNEL32.dll)
+                 _invoke_watson		; MSVCRT.lib(MSVCR100.dll)
+                 SetCommTimeouts@8		; kernel32.lib(KERNEL32.dll)
+                 GetTickCount@0		; kernel32.lib(KERNEL32.dll)
+                 _IsNonwritableInCurrentImage		; MSVCRT.lib(pesect.obj)
+                 ClearCommError@12		; kernel32.lib(KERNEL32.dll)
+                 _amsg_exit		; MSVCRT.lib(MSVCR100.dll)
+                 _XcptFilter		; MSVCRT.lib(MSVCR100.dll)
+                 LoadCursorA@8		; user32.lib(USER32.dll)
+                 CreateWindowExA@48		; user32.lib(USER32.dll)
+                 InterlockedExchange@8		; kernel32.lib(KERNEL32.dll)
+                 UnhandledExceptionFilter@4		; kernel32.lib(KERNEL32.dll)
+                 _except_handler4_common		; MSVCRT.lib(MSVCR100.dll)
+                 _matherr		; MSVCRT.lib(merr.obj)
+                 __getmainargs		; MSVCRT.lib(MSVCR100.dll)
+                 _beginthread		; MSVCRT.lib(MSVCR100.dll)
+                 ShowWindow@8		; user32.lib(USER32.dll)
+                 WaitForSingleObject@8		; kernel32.lib(KERNEL32.dll)
+                 atoi		; MSVCRT.lib(MSVCR100.dll)
+                 SendMessageA@16		; user32.lib(USER32.dll)
+                 MessageBoxA@16		; user32.lib(USER32.dll)
+                 exit		; MSVCRT.lib(MSVCR100.dll)
+                 GetStockObject@4		; gdi32.lib(GDI32.dll)
+                 __dllonexit		; MSVCRT.lib(MSVCR100.dll)
+                 _initterm_e		; MSVCRT.lib(MSVCR100.dll)
+                 GetLastError@0		; kernel32.lib(KERNEL32.dll)
+         
+         Finished processing /ORDER options
+             Discarded __imp__ClearCommError@12 from kernel32.lib(KERNEL32.dll)
+             Discarded __imp__ReadFile@20 from kernel32.lib(KERNEL32.dll)
+             Discarded "private: static unsigned int const <CrtImplementationDetails>::NativeDll::ProcessDetach" (?ProcessDetach@NativeDll@<CrtImplementationDetails>@@0IB) from MSVCRT.lib(unhandld.obj)
+             Discarded "private: static unsigned int const <CrtImplementationDetails>::NativeDll::ProcessAttach" (?ProcessAttach@NativeDll@<CrtImplementationDetails>@@0IB) from MSVCRT.lib(unhandld.obj)
+             Discarded "private: static unsigned int const <CrtImplementationDetails>::NativeDll::ThreadAttach" (?ThreadAttach@NativeDll@<CrtImplementationDetails>@@0IB) from MSVCRT.lib(unhandld.obj)
+             Discarded "private: static unsigned int const <CrtImplementationDetails>::NativeDll::ThreadDetach" (?ThreadDetach@NativeDll@<CrtImplementationDetails>@@0IB) from MSVCRT.lib(unhandld.obj)
+             Discarded "private: static unsigned int const <CrtImplementationDetails>::NativeDll::ProcessVerifier" (?ProcessVerifier@NativeDll@<CrtImplementationDetails>@@0IB) from MSVCRT.lib(unhandld.obj)
+             Discarded '.idata$4' from kernel32.lib(KERNEL32.dll)
+             Discarded '.idata$4' from kernel32.lib(KERNEL32.dll)
+             Discarded '.idata$6' from kernel32.lib(KERNEL32.dll)
+             Discarded '.idata$6' from kernel32.lib(KERNEL32.dll)
+             Discarded "void __cdecl cpuUsageInit(void)" (?cpuUsageInit@@YAXXZ) from PCStatus.obj
+             Discarded "int __cdecl cpuUsageValue(void)" (?cpuUsageValue@@YAHXZ) from PCStatus.obj
+             Discarded "int __cdecl memUsageLSB(int)" (?memUsageLSB@@YAHH@Z) from PCStatus.obj
+             Discarded "int __cdecl memUsageMSB(int)" (?memUsageMSB@@YAHH@Z) from PCStatus.obj
+             Discarded "public: __thiscall CSerial::CSerial(void)" (??0CSerial@@QAE@XZ) from Serial.obj
+             Discarded "public: __thiscall CSerial::~CSerial(void)" (??1CSerial@@QAE@XZ) from Serial.obj
+             Discarded _PdhGetFormattedCounterValue@16 from Pdh.lib(pdh.dll)
+             Discarded _PdhOpenQueryA@12 from Pdh.lib(pdh.dll)
+             Discarded _PdhAddCounterA@16 from Pdh.lib(pdh.dll)
+             Discarded _PdhCollectQueryData@4 from Pdh.lib(pdh.dll)
+             Discarded _Sleep@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetLastError@0 from kernel32.lib(KERNEL32.dll)
+             Discarded _GlobalMemoryStatusEx@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetModuleHandleA@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _SetupComm@12 from kernel32.lib(KERNEL32.dll)
+             Discarded _CreateFileA@28 from kernel32.lib(KERNEL32.dll)
+             Discarded _ClearCommError@12 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetCommState@8 from kernel32.lib(KERNEL32.dll)
+             Discarded _WaitForSingleObject@8 from kernel32.lib(KERNEL32.dll)
+             Discarded _WriteFile@20 from kernel32.lib(KERNEL32.dll)
+             Discarded _SetCommState@8 from kernel32.lib(KERNEL32.dll)
+             Discarded _SetCommTimeouts@8 from kernel32.lib(KERNEL32.dll)
+             Discarded _CreateEventA@16 from kernel32.lib(KERNEL32.dll)
+             Discarded _ReadFile@20 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetOverlappedResult@16 from kernel32.lib(KERNEL32.dll)
+             Discarded _CloseHandle@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _LoadCursorA@8 from user32.lib(USER32.dll)
+             Discarded _DispatchMessageA@4 from user32.lib(USER32.dll)
+             Discarded _ShowWindow@8 from user32.lib(USER32.dll)
+             Discarded _DefWindowProcA@16 from user32.lib(USER32.dll)
+             Discarded _CreateWindowExA@48 from user32.lib(USER32.dll)
+             Discarded _MessageBoxA@16 from user32.lib(USER32.dll)
+             Discarded _TranslateMessage@4 from user32.lib(USER32.dll)
+             Discarded _SendMessageA@16 from user32.lib(USER32.dll)
+             Discarded _LoadIconA@8 from user32.lib(USER32.dll)
+             Discarded _LoadStringA@16 from user32.lib(USER32.dll)
+             Discarded _PostQuitMessage@4 from user32.lib(USER32.dll)
+             Discarded _RegisterClassExA@4 from user32.lib(USER32.dll)
+             Discarded _GetMessageA@16 from user32.lib(USER32.dll)
+             Discarded _wsprintfA from user32.lib(USER32.dll)
+             Discarded _GetStockObject@4 from gdi32.lib(GDI32.dll)
+             Discarded _Shell_NotifyIconA@8 from shell32.lib(SHELL32.dll)
+             Discarded _sprintf from MSVCRT.lib(MSVCR100.dll)
+             Discarded _atoi from MSVCRT.lib(MSVCR100.dll)
+             Discarded __beginthread from MSVCRT.lib(MSVCR100.dll)
+             Discarded _NtCurrentTeb from MSVCRT.lib(crtexew.obj)
+             Discarded _check_managed_app from MSVCRT.lib(crtexew.obj)
+             Discarded ___getmainargs from MSVCRT.lib(MSVCR100.dll)
+             Discarded __cexit from MSVCRT.lib(MSVCR100.dll)
+             Discarded __exit from MSVCRT.lib(MSVCR100.dll)
+             Discarded __ismbblead from MSVCRT.lib(MSVCR100.dll)
+             Discarded _exit from MSVCRT.lib(MSVCR100.dll)
+             Discarded __configthreadlocale from MSVCRT.lib(MSVCR100.dll)
+             Discarded __invoke_watson_if_error from MSVCRT.lib(fp8.obj)
+             Discarded ___setusermatherr from MSVCRT.lib(MSVCR100.dll)
+             Discarded ___set_app_type from MSVCRT.lib(MSVCR100.dll)
+             Discarded _EncodePointer@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _DecodePointer@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _InterlockedExchange@8 from kernel32.lib(KERNEL32.dll)
+             Discarded _InterlockedCompareExchange@12 from kernel32.lib(KERNEL32.dll)
+             Discarded _HeapSetInformation@16 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetStartupInfoW@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _TerminateProcess@8 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetCurrentProcess@0 from kernel32.lib(KERNEL32.dll)
+             Discarded _UnhandledExceptionFilter@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _SetUnhandledExceptionFilter@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _IsDebuggerPresent@0 from kernel32.lib(KERNEL32.dll)
+             Discarded _QueryPerformanceCounter@4 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetTickCount@0 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetCurrentThreadId@0 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetCurrentProcessId@0 from kernel32.lib(KERNEL32.dll)
+             Discarded _GetSystemTimeAsFileTime@4 from kernel32.lib(KERNEL32.dll)
+         
+             Selected symbol:
+                 __matherr from MSVCRT.lib(merr.obj)
+             Replaced symbol(s):
+                 __setargv from MSVCRT.lib(dllargv.obj)
+         
+             ICF total savings: 3 bytes
+         
+         Starting pass 2
+               CIL library( CIL module)
+              resource.res
+              Pdh.lib(pdh.dll)
+              Pdh.lib(pdh.dll)
+              Pdh.lib(pdh.dll)
+              Pdh.lib(pdh.dll)
+              Pdh.lib(pdh.dll)
+              Pdh.lib(pdh.dll)
+              Pdh.lib(pdh.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              kernel32.lib(KERNEL32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              user32.lib(USER32.dll)
+              gdi32.lib(GDI32.dll)
+              gdi32.lib(GDI32.dll)
+              gdi32.lib(GDI32.dll)
+              shell32.lib(SHELL32.dll)
+              shell32.lib(SHELL32.dll)
+              shell32.lib(SHELL32.dll)
+              MSVCRT.lib(unhandld.obj)
+              MSVCRT.lib(atonexit.obj)
+              MSVCRT.lib(cinitexe.obj)
+              MSVCRT.lib(crtexew.obj)
+              MSVCRT.lib(dllargv.obj)
+              MSVCRT.lib(gs_cookie.obj)
+              MSVCRT.lib(gs_report.obj)
+              MSVCRT.lib(gs_support.obj)
+              MSVCRT.lib(merr.obj)
+              MSVCRT.lib(natstart.obj)
+              MSVCRT.lib(pesect.obj)
+              MSVCRT.lib(wildcard.obj)
+              MSVCRT.lib(chandler4gs.obj)
+              MSVCRT.lib(fp8.obj)
+              MSVCRT.lib(loadcfg.obj)
+              MSVCRT.lib(secchk.obj)
+              MSVCRT.lib(sehprolg4.obj)
+              MSVCRT.lib(_newmode.obj)
+              MSVCRT.lib(xncommod.obj)
+              MSVCRT.lib(xtxtmode.obj)
+              MSVCRT.lib(xthdloc.obj)
+              MSVCRT.lib(_initsect_.obj)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+              MSVCRT.lib(MSVCR100.dll)
+         Finished pass 2
+         PCStatus.vcxproj -> C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\Release\PCStatus-32bit.exe;#1" /manifest "Release\PCStatus-32bit.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "Release\PCStatus.unsuccessfulbuild".
+         Touching "Release\PCStatus.lastbuildstate".
+     1>Done Building Project "C:\Users\Tiit\Google Drive\Dev\VC\PCStatus\PCStatus\PCStatus.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.70
