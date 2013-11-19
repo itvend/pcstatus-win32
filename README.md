@@ -11,9 +11,9 @@ Hardware:
   
 Software:
   1. avr firmware
-  2. win32 console application
+  2. win32 gui application
   3. 
   
 Usage:
   1. flash your avr device
-  2. start windows app -> CPUUsageVC10.exe -c <"com port number 1-99"> -b <"boud rate"> -t <"update time ms 501 - 9999">
+  2. start windows app
